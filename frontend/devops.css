@@ -1,0 +1,39 @@
+.tile.tile-blue {
+    background-color: #debfb5;
+    color: black;
+}
+
+.tile.tile-green {
+    background-color: #abcfcd;
+    color: black;
+}
+
+.tile.tile-orange {
+    background-color: #9897bf;
+    color: black;
+}
+
+.tile {
+    border-radius: 10px;
+}
+
+.tile.tile-search {
+    background-color: #bdc3c7;
+    color: black;
+}
+
+/* devops branding */
+.devops-green {
+    background-color: #45AB4F;
+}
+
+.navbar, .navbar-dark, .bg-dark {
+    background-color: #45AB4F !important;
+    border-color: #45AB4F !important;
+    color: #45AB4F !important;
+}
+
+/* gitpod workaround */
+.breadcrumb {
+    display: none !important;
+}

@@ -1,0 +1,86 @@
+<div *ngIf="displayGraph">
+    <plotly-plot [data]="graph.data" [layout]="graph.layout" [config]="{displayModeBar: false, staticPlot: true}"></plotly-plot>
+</div>
+
+<div class="col-md-12">
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Beschreibung</th>
+            <th scope="col">Wert</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of summaryItems">
+            <th scope="row">{{item.key}}</th>
+            <td *ngIf="item.value"><span style="white-space: pre-wrap;">{{item.value}}</span></td>
+            <td *ngIf="item.files.length > 0">
+                <div *ngFor="let file of item.files"><a href="#" (click)="download(file.key)">{{file.name}}</a></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="container" style="display: none">
+
+    <h1>Zarko Signer</h1>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Attribut \ Impact</th>
+            <th scope="col"><i class="fa fa-minus"></i> <i class="fa fa-minus"></i></th>
+            <th scope="col"><i class="fa fa-minus"></i></th>
+            <th scope="col"><i class="fa fa-minus"></i> / <i class="fa fa-plus"></i></th>
+            <th scope="col"><i class="fa fa-plus"></i></th>
+            <th scope="col"><i class="fa fa-plus"></i> <i class="fa fa-plus"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Vorgeschichte</th>
+            <td>&nbsp;</td>
+            <td><i class="fa fa-times"></i></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th scope="row">Ernährung</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><i class="fa fa-times"></i></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th scope="row">Bewegung</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><i class="fa fa-times"></i></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th scope="row">Gesundheit</th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><i class="fa fa-times"></i></td>
+        </tr>
+        <tr>
+            <th scope="row">... (tbd)</th>
+            <td><i class="fa fa-times"></i></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

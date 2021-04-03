@@ -1,0 +1,14 @@
+tasks:
+  - init: eval $(gp env NG_CLI_ANALYTICS=false) && cd frontend && npm install
+    command: npm run start
+  - command: gp open frontend/src/app/gui-model/guimodel.ts
+  - command: cd backend && gradle run
+ports:
+  - port: 4200
+    onOpen: open-preview
+  - port: 4567
+    onOpen: ignore
+  - port: 9998
+    onOpen: ignore
+  - port: 9999
+    onOpen: ignore

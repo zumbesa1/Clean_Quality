@@ -1,0 +1,19 @@
+matrix:
+  include:  
+  - language: node_js
+    sudo: false
+    node_js:
+    - "12.13"
+    before_install:
+        - cd frontend 
+    install:
+       - npm install
+    script:
+       - npm run build
+       
+  - language: java
+    jdk: openjdk12
+    before_install:
+    - chmod +x backend/gradlew  
+    script:
+    - ./backend/gradlew check --project-dir backend

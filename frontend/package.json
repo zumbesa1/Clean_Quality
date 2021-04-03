@@ -1,0 +1,58 @@
+{
+  "name": "devops",
+  "version": "0.0.2",
+  "homepage": "https://github.com/zhaw-iwi/devops/",
+  "bugs": {
+    "url": "https://github.com/zhaw-iwi/devops/issues"
+  },
+  "license": "ISC",
+  "private": true,
+  "author": {
+    "name": "Adrian Moser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhaw-iwi/devops.git"
+  },
+  "engines": {
+    "node": "12.13.1",
+    "npm": "6.12.1"
+  },
+  "scripts": {
+    "start": "ng serve --disable-host-check --host 0.0.0.0",
+    "build": "npm run lint && ng build",
+    "test": "ng test",
+    "lint": "tslint --project .",
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build"
+  },
+  "dependencies": {
+    "angular-plotly.js": "1.5.0",
+    "path-framework": "0.6.2-beta.9",
+    "plotly.js": "1.52.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "0.803.19",
+    "@angular/cli": "8.3.19",
+    "@angular/compiler-cli": "8.2.14",
+    "@types/jasmine": "3.4.6",
+    "@types/jasminewd2": "2.0.8",
+    "@types/node": "6.0.60",
+    "concurrently": "5.0.0",
+    "codelyzer": "5.2.0",
+    "jasmine-core": "3.5.0",
+    "jasmine-spec-reporter": "4.2.1",
+    "karma": "4.4.1",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-coverage-istanbul-reporter": "2.1.0",
+    "karma-firefox-launcher": "1.2.0",
+    "karma-jasmine": "2.0.1",
+    "karma-jasmine-html-reporter": "1.4.2",
+    "nodemon": "1.19.4",
+    "protractor": "6.0.0",
+    "ts-node": "8.5.2",
+    "tslint": "5.20.1",
+    "tslint-angular": "3.0.2",
+    "typescript": "3.5.3"
+  }
+}

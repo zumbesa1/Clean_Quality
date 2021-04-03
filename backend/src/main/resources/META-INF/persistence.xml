@@ -1,0 +1,55 @@
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="AssessmentTool" transaction-type="RESOURCE_LOCAL">
+		<class>ch.zhaw.iwi.devops.model.file.File</class>
+		<class>ch.zhaw.iwi.devops.model.user.User</class>
+		<class>ch.zhaw.iwi.devops.model.patient.Patient</class>
+		<class>ch.zhaw.iwi.devops.model.file.File</class>
+		<class>ch.zhaw.iwi.devops.model.interactionstep.InteractionStep</class>
+		<class>ch.zhaw.iwi.devops.model.interactionstep.BusinessCaseInteractionStep</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.InteractionElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.button.BackButtonElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.button.ButtonElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.list.ButtonListElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.button.ButtonSelectionElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.button.ButtonSelectionElementValue</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.list.TileListElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.text.TextElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.form.FormDateFieldElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.form.FormRadioButtonListElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.form.FormRadioButtonValue</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.form.FormSliderFieldElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.form.FormTextFieldElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.form.FormNumberFieldElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.form.FormFileUploadElement</class>
+		<class>ch.zhaw.iwi.devops.model.interactionelement.form.FormFileType</class>
+		<class>ch.zhaw.iwi.devops.model.questionnaire.Questionnaire</class>
+		<class>ch.zhaw.iwi.devops.model.questionnaireresponse.QuestionnaireResponse</class>
+		<class>ch.zhaw.iwi.devops.model.questionnaireresponse.value.InteractionElementTextValue</class>
+		<class>ch.zhaw.iwi.devops.model.questionnaireresponse.value.InteractionElementDoubleValue</class>
+		<class>ch.zhaw.iwi.devops.model.questionnaireresponse.value.InteractionElementLongValue</class>
+		<class>ch.zhaw.iwi.devops.model.questionnaireresponse.value.InteractionElementFileValue</class>
+		<class>ch.zhaw.iwi.devops.model.sport.Sport</class>
+		<class>ch.zhaw.iwi.devops.model.studyprogram.StudyProgram</class>
+		<class>ch.zhaw.iwi.devops.model.user.permission.PermissionFunction</class>
+		<class>ch.zhaw.iwi.devops.model.user.permission.PermissionRole</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:assessmentTool;DB_CLOSE_DELAY=-1" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="show_sql" value="true" />
+			<property name="hibernate.temp.use_jdbc_metadata_defaults" value="false" />
+
+			<property name="hibernate.connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider" />
+			<property name="hibernate.c3p0.max_size" value="10" />
+			<property name="hibernate.c3p0.min_size" value="1" />
+			<property name="hibernate.c3p0.acquire_increment" value="1" />
+			<property name="hibernate.c3p0.testConnectionOnCheckout" value="true" />
+			<property name="hibernate.c3p0.preferredTestQuery" value="select 1" />
+			<property name="hibernate.c3p0.max_statements" value="0" />
+			<property name="hibernate.c3p0.timeout" value="100" />
+		</properties>
+	</persistence-unit>
+</persistence>
